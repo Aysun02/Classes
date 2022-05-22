@@ -1,0 +1,70 @@
+﻿using System;
+
+namespace ConsoleApp12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student Ebubekir = new Student
+            {
+                HomeworkGrades = new int[] { 100, 100, 100, 100 },
+                ProjectGrades = new int[] { 100, 100, 100 },
+                FinalGrade = 100,
+                Attendance = new bool[] { true, true, true, true, true }
+            };
+            Ebubekir.AveragesOfGrades();
+        }
+        class Student
+        {
+            public int[] HomeworkGrades;
+            public int[] ProjectGrades;
+            public int FinalGrade;
+            public bool[] Attendance;
+
+            public void AveragesOfGrades()
+            {
+                int sumH = 0;
+                int AverageH = 0;
+                int counterH = 0;
+                for (int i = 0; i < HomeworkGrades.Length; i++)
+                {
+                    sumH += HomeworkGrades[i];
+                    counterH++;
+                    AverageH = sumH / counterH;
+                }
+                int sumP = 0;
+                int AverageP = 0;
+                int counterP = 0;
+                for (int i = 0; i < HomeworkGrades.Length; i++)
+                {
+                    sumP += HomeworkGrades[i];
+                    counterP++;
+                    AverageP = sumP / counterP;
+                }
+                int sumTrue = 5;
+                int sumFalse = 0;
+                int AverageA = 0;
+                AverageA = ((sumTrue / (sumTrue + sumFalse)) * 100);
+
+                if ((AverageH * 25 + AverageP * 25 + FinalGrade * 40 + AverageA * 10) / 100 > 90)
+                {
+                    Console.WriteLine("HighHonor");
+                }
+               else if ((AverageH * 25 + AverageP * 25 + FinalGrade * 40 + AverageA * 10) / 100 > 80)
+                {
+                    Console.WriteLine("Honor");
+                }
+                else if ((AverageH * 25 + AverageP * 25 + FinalGrade * 40 + AverageA * 10) / 100 <80)
+                {
+                    Console.WriteLine("Normal");
+                }
+
+            }
+
+        }
+
+    }
+}
+
+

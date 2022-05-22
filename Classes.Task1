@@ -1,0 +1,37 @@
+﻿using System;
+
+namespace ConsoleApp13
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] Arr = { 2, 6, 8, 22, 87, 3, 5, 7 };
+            CustomSort(Arr);
+        }
+        static void CustomSort(int[] Arr)
+        {
+            int temp = 0;
+
+            for (int i = 0; i <= Arr.Length - 1; i++)
+            {
+                for (int j = i + 1; j < Arr.Length; j++)
+                {
+                    if (Arr[i] > Arr[j])
+                    {
+                        temp = Arr[i];
+                        Arr[i] = Arr[j];
+                        Arr[j] = temp;
+                    }
+                }
+            }
+            foreach (var item in Arr)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+
+    }
+        }
+    
