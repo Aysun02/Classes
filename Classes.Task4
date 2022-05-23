@@ -8,7 +8,7 @@ namespace ConsoleApp16
             User Ebubekir = new User
             {
                 Name = "Aysun",
-                Password = "Aysun2003",
+                Password = "Aysun",
                 SurName = "Huseynli",
                 Age = 18,
                 gmail = "aysunhuseynli002@gmail.com",
