@@ -11,7 +11,7 @@ namespace ConsoleApp13
         }
         static void CustomSort(int[] Arr)
         {
-            int temp = 0;
+            int sabit = 0;
 
             for (int i = 0; i <= Arr.Length - 1; i++)
             {
@@ -19,9 +19,9 @@ namespace ConsoleApp13
                 {
                     if (Arr[i] > Arr[j])
                     {
-                        temp = Arr[i];
+                        sabit = Arr[i];
                         Arr[i] = Arr[j];
-                        Arr[j] = temp;
+                        Arr[j] = sabit;
                     }
                 }
             }
