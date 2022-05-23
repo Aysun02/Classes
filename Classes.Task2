@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace ConsoleApp14
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] Array = { "Baki", "Agdam", "Berde" };
+            char letter = 'B';
+            StringArray(Array, letter);
+        }
+        static void StringArray(string[] Array, char letter)
+        {
+            for (int i = 0; i < Array.Length; i++)
+            {
+                if (Array[i].Contains(letter) )
+                {
+                    Console.WriteLine(Array[i]);
+                }
+                
+            }
+        }
+    }
+}
