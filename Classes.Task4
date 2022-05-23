@@ -35,7 +35,7 @@ namespace ConsoleApp16
                 {
                     foreach (var letters in Name)
                     {
-                        if (Password.Length < 6 && characters != ededler && characters == letters)
+                        if (Password.Length < 6 & characters != ededler & characters == letters)
                         {
                             return false;
                         }
