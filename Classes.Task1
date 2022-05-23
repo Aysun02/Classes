@@ -13,7 +13,7 @@ namespace ConsoleApp13
         {
             int sabit = 0;
 
-            for (int i = 0; i <= Arr.Length - 1; i++)
+            for (int i = 0; i < Arr.Length; i++)
             {
                 for (int j = i + 1; j < Arr.Length; j++)
                 {
